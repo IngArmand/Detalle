@@ -1348,3 +1348,45 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }/*# sourceMappingURL=main.css.map */
+
+/* Estilos para el texto */
+#text-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 1000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  max-width: 80%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+#text-container span {
+  opacity: 0;
+  animation: letterAppear 0.1s forwards;
+}
+
+@keyframes letterAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
